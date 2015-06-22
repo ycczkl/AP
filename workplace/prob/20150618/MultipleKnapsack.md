@@ -1,6 +1,6 @@
 # Description
 
-Given N kind of items where the ith kind of item has n[i] items at most and each of them has size c[i] and value w[i] (1 <= i < N), design an algorithm to maximize the total value of items filled into a knapsack with capacity V. So the sum of sizes in the knapsack shouldn't be bigger than V.
+Given N kind of items where the ith kind of item has n[i] items at most and each of them has size c[i] and value w[i] [1 <= i <= N], design an algorithm to maximize the total value of items filled into a knapsack with capacity V. So the sum of sizes in the knapsack shouldn't be bigger than V.
 
 ## Input File
 
