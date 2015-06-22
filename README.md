@@ -18,7 +18,7 @@ AP (Advanced Programming 的缩写) 是BuptAAA 的 Job Seeking Package 底下的
 
 2. 写代码过程要写testcases
 
-3. 从这15道题为每人选出这周要写report的题目[```强调:``` 用```英文```写作]
+3. 从这15道题为每人选出这周要写report的题目, 一道题写成一份```英文```report
 
 4. 每人会被分配三个review对象（成员），要对他/她的代码和报告进行review
 
