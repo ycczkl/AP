@@ -28,17 +28,15 @@ You should implement both top-down and bottom-up dp solution. Any non-dp (e.g gr
 3 1 2 5 6
 
 ### Output
-2
-<br>
 False
 <br>
 <br>
 True
 <br>
 0 1
-1 2
 <br>
-1 3 5 3 5
+1 2
+
 
 
 
