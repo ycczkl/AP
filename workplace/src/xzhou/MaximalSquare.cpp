@@ -43,9 +43,9 @@ int main(){
 							dp[i][j][m] = dp[i][j][m-1] && dp[i+m-1][j+m][m-1] && dp[i+m][j+m-1][m-1];
 						}
 
-						if (dp[i][j][m] && final_max < (m-i + 1) * (n-j + 1))
+						if (dp[i][j][m] && final_max < m * m)
 						{
-							final_max = (m-i + 1) * (n-j + 1);
+							final_max = m * m;
 							left_top_x = i;
 							left_top_y = j ;
 							diaganal_length = m;
@@ -59,3 +59,33 @@ int main(){
 		<< left_top_x + diaganal_length << " "<< left_top_y << " " << left_top_x + diaganal_length << " " << left_top_y + diaganal_length << endl;
 	}
 }
+
+/*
+	optimization: we can just use a 2D dp array to solve this problem. dp[i][j] is the maximum side length 
+	ending(right bottom) at (i,j)
+	so the start transfer equation will be dp[i][j] = min(dp[i-1][j],dp[i][j-1],dp[i-1][j-1]) + 1;
+
+	the dp process is as follow:
+
+	vector<vector<int>> dp(rows, vector<int>(cols, 0));
+    int final_max = 0 ;
+    for(int i = 0 ; i < rows; ++i){
+        for(int j = 0 ; j < cols; ++j){
+            if(i == 0 || j == 0) {
+                dp[i][j] = matrix[i][j] - '0';
+                final_max = max(dp[i][j],m);
+                
+            }
+            else{
+                if(matrix[i][j] == '0') dp[i][j] = 0;
+                else{
+                    dp[i][j] = min(dp[i-1][j],dp[i][j-1]);
+                    dp[i][j] = min(dp[i][j],dp[i-1][j-1]);
+                    dp[i][j] ++;
+                    final_max = max(dp[i][j],final_max);
+                }
+            }
+        }
+    }
+    return final_max * final_max;
+*/
