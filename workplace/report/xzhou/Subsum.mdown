@@ -1,0 +1,7 @@
+# Description
+
+Given an array A of n positive integers (including zero), and another positive integer S, design a DP algorithm that determines if there is a subset of A, where the sum of all the integers in the subset equals to S (the output is true/false).
+
+# Basic solution
+
+This question is to tell whether there is a subset whose sum is equal to a given number. Because it is required to use dp algorithm, we have to first be clear what is the recursive equation for dp. The total number of subsets of an array of length n is n^2 /2. So the most intuitive one for this question is to use a 2D array dp[i][j] denoting the sum starting from ith and ending at jth element. And it is easy to derive the recursive equation for this one: dp[i][j] = dp[i][j-1] + a[j]. The time and space complexity are both $O(n^{2})$
